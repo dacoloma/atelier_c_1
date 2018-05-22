@@ -5,7 +5,15 @@ adresses.
 
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b); // Prototype de fonction
+void	ft_swap(int *a, int *b) // Prototype de fonction
+{
+	int c=*a;
+
+	*a=*b;
+	*b=c;
+	//printf("%s%d\n", "a = ", a);
+
+}
 
 int		main(void) // main de test
 {
@@ -14,9 +22,10 @@ int		main(void) // main de test
 
 	a = 10;
 	b = 5;
-	ft_swap(&a, &b); 
+	ft_swap(&a, &b);
 	printf("%s%d\n", "a = ", a);
 	printf("%s%d", "b = ", b);
+	printf("\n");
 	// Apres cet appel de fonction normalement a doit etre egal à 5 et b doit etre egal à 10.
 	return (0);
 }
